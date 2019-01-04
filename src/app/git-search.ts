@@ -1,7 +1,7 @@
 export interface GitSearch {
         // tslint:disable-next-line:quotemark
-       'id': number;
-        'incomplete_results': boolean;
+       'total_count': number,
+        'incomplete_results': boolean,
         'items': Array<
           {
             'id': number,
