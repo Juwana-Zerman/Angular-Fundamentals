@@ -13,11 +13,6 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit() {
-    this.GitSearchService.gitSearch('angular').then((response) => {
-      alert('Total Libraries Found:' + response.total_count);
-    }, (error) => {
-      alert('Error: ' + error.statusText);
-    });
   }
   // tslint:disable-next-line:member-ordering
   title = 'app is functional!';
