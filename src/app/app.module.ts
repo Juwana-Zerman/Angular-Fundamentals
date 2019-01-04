@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {GitSearchService} from './git-search.service';
 import { GitSearchComponent } from './git-search/git-search.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { GitSearchComponent } from './git-search/git-search.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [GitSearchService],
