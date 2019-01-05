@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {GitSearchService} from './git-search.service';
+import { GitSearchService } from './git-search.service';
+// import { GitSearch } from './git-search';
 
 @Component({
   selector: 'app-root',
@@ -15,5 +16,5 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
   // tslint:disable-next-line:member-ordering
-  title = 'app is functional!';
+  title = 'Github Browser!';
 }

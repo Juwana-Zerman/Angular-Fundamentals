@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {HttpClientModule} from '@angular/common/http';
-import {GitSearchService} from './git-search.service';
+import { HttpClientModule } from '@angular/common/http';
+import { GitSearchService } from './git-search.service';
 import { GitSearchComponent } from './git-search/git-search.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -10,7 +10,26 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes  = [
-  { path: '',
+  {
+    path: '',
+    component: HomePageComponent
+  },
+  {
+    path: 'search',
+    redirectTo: '/search/angular',
+    pathMatch: 'full'
+  },
+  {
+    path: 'search/:query',
+    component: GitSearchComponent,
+    data: {
+      title: 'Git Search'
+    }
+  },
+  { path: '**', component: NotFoundComponent }
+];
+
+  /*{ path: '',
     component: HomePageComponent
   },
   { path: 'search',
@@ -20,7 +39,7 @@ const appRoutes: Routes  = [
     }
   },
   { path: '**', component: NotFoundComponent }
-];
+];*/
 
 @NgModule({
   declarations: [
@@ -32,11 +51,9 @@ const appRoutes: Routes  = [
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
+    // ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(
-      appRoutes
-    )
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [GitSearchService],
   bootstrap: [AppComponent]
