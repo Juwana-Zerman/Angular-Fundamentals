@@ -1,6 +1,5 @@
 # AngularFundamentals
 
-[View Live Version Here](https://jzerman2018.github.io/Angular-Fundamentals/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
